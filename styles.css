@@ -1,0 +1,296 @@
+:root{
+    --mainColor:white;
+    --secondaryColor:rgba(255, 255, 255, 0.18);
+    --dark:rgba(255, 255, 255, 0.104);
+}
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    color:var(--mainColor)
+}
+@font-face {
+    font-family: mainFont;
+    src: url(Poppins-Bold.ttf);
+}
+body{
+    background-color: #141618;
+}
+.underConstruction{
+    width:100%;
+    text-align: center;
+    font-family: mainFont;
+    text-transform: uppercase;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    height: 5vh;
+    color:var(--mainColor);
+    letter-spacing: 1px;
+    position: fixed;
+    z-index: 99;
+}
+.underConstruction span{
+    animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .25;
+    }
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+}
+.container1 h1{
+    font-size: 10vw;
+    font-family: mainFont;
+    text-transform: lowercase;
+    letter-spacing: 2.5px;
+    pointer-events: none;
+    z-index: 5;
+    margin-top: -10%;
+    margin-left: 10px;
+}
+.container1 span{
+    font-family: mainFont;
+    color: var(--secondaryColor);
+    min-height: 2em;
+    text-align: left;
+    margin:-5% 0px 0px 0px;
+    font-size: 3vw;
+    pointer-events: none;
+    display: flex;
+    margin-left: 10px;
+}
+.container2{
+    width:80%;
+    margin: auto;
+    border-top:solid var(--dark) .5px;
+    display: flex;
+    justify-content: space-between;
+}
+.container2 h1{
+    font-family: mainFont;
+    font-size: clamp(12px,2.5vw,15px);
+    text-transform: capitalize;
+    margin-top: var(--elementGap);
+    color: var(--secondaryColor);
+    pointer-events: none;
+    margin-top: 12px;
+}
+.container3{
+    width:80%;
+    margin: 150px auto 150px auto;
+    text-align: center;
+}
+.container3 p{
+    font-family: mainFont;
+    font-size: clamp(15px,2.5vw,20px);
+}
+.container4{
+    width:80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-template-rows: repeat(9,auto);
+    gap: 20px;
+}
+.container4 .box{
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 21px;
+    padding:25px;
+    /*border:solid rgb(166, 255, 0) 5px;*/
+}
+.container4 .box h1{
+    font-family: mainFont;
+    text-transform: capitalize;
+    font-size: clamp(13px,2.5vw,14px);
+    margin-bottom: 12px;
+}
+.container4 .box p{
+    font-family: mainFont;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.418);
+    font-size: clamp(10px,2.5vw,14px);
+}
+.container4 .box1{
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.container4 .box1 img{
+    width: 20%;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.container4 .box2{
+    font-size: clamp(10px,2.5vw,14px);
+    grid-column: 1/2;
+    grid-row: 2;
+}
+.container4 .box3{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+.container4 .box3 .all{
+    display: flex;
+    margin: 10% auto;
+}
+.container4 .box3 .all .left{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+.container4 .box3 .all .right{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.container4 .box3 .all h1{
+    font-size: clamp(10px,2.5vw,14px);
+    font-family: mainFont;
+}
+.container4 .box3 .all h2{
+    font-size: clamp(8px,2.5vw,12px);
+    font-family: mainFont;
+    margin-top: -17px;
+    color: var(--secondaryColor);
+}
+.container4 .box4 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+
+    object-fit: cover;
+}
+.container4 .box5 iframe{
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 3;
+
+}
+.container4 .box6{
+    height: auto;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.container4 .box6 iframe{
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    opacity: 0.90;
+    scrollbar-width: none;
+}
+.container4 .box7 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    object-fit: cover;
+}
+.container4 .box8 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    object-fit: cover;
+}
+.container4 .box9 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    object-fit: cover;
+}  
+.contact{
+    width: 70%;
+    margin: auto;
+    margin-bottom: var(--containerGap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+.contact input{
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    border-bottom: solid var(--secondaryColor) 1px;
+    font-family: mainFont;
+    text-transform: capitalize;
+    background-color: transparent;
+}
+.contact button{
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: mainFont;
+    background-color: var(--mainColor);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--mainColor);
+}
+.contact button:hover{ 
+    background-color: var(--secondaryColor);
+}
+footer{
+    font-family: mainFont;
+    font-size: 10px;
+    color:var(--secondaryColor);
+    text-align: center;
+    pointer-events: none;
+    margin: 50px auto 21px auto;
+}
+@media(max-width:900px){
+    .container4 .box1{
+        grid-column: 1/2;
+        grid-row: 1;
+        text-align: left;
+
+        justify-content: left;
+        display: flex;
+    }
+    .container4{
+        display: flex;
+        flex-direction: column;
+    }
+    .container4 .box6{
+        height: 500px;
+    }
+    .container4 .box5{
+        height: 500px;
+    }
+    .container4 .box3 .all{
+        display: flex;
+        margin: 5% auto;
+    }   
+}

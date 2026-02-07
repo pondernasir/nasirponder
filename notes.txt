@@ -1,0 +1,125 @@
+background color: 141618;
+:root{
+    --mainColor:black;
+    --secondaryColor:rgba(255, 255, 255, 0.18);
+    --dark:rgba(255, 255, 255, 0.104);
+    --elementGap:12px;
+}
+    background-color: #141618;
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    ------
+    black:
+    background-color: black;
+    background-image: 
+    linear-gradient(to right,  rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+    ------
+    #F5F5EF
+
+
+--------
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: #111;
+  border-radius: 20px;
+  padding: 8px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+
+<script>
+  let current = 1;
+  let total = 3;
+
+  function updateText() {
+    document.getElementById("text").innerText =
+      current + " / " + total;
+  }
+
+  function next() {
+    if (current < total) {
+      current = current + 1;
+    }
+    updateText();
+  }
+
+  function prev() {
+    if (current > 1) {
+      current = current - 1;
+    }
+    updateText();
+  }
+</script>
+
+
+<div class="box">
+  <button onclick="prev()">▲</button>
+  <span id="text">1 / 3</span>
+  <button onclick="next()">▼</button>
+</div>
+
+const container = document.querySelector('.container_4');
+const images = container.querySelectorAll('img');
+
+const scrollSpeed = 5; // pixels per frame (used for smooth movement)
+const pauseTime = 3000; // pause time in ms on each image
+let currentIndex = 0;
+let isPaused = false;
+
+function scrollToNextImage() {
+    if (isPaused) return;
+
+    const imgWidth = images[currentIndex].offsetWidth + 10; // image width + gap
+    const targetScroll = imgWidth * currentIndex;
+
+    container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+    });
+
+    isPaused = true;
+
+    // Pause on the current image
+    setTimeout(() => {
+        isPaused = false;
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0; // loop back to first image
+        }
+        scrollToNextImage();
+    }, pauseTime);
+}
+
+// Start the snapping scroll
+scrollToNextImage();
+
+--
+Secondary Color: rgba(255, 255, 255, 0.327)
